@@ -1,7 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Context>
-    <Resource
-            name="jms/ConnectionFactory"
+    <!-- Default set of monitored resources -->
+    <WatchedResource>WEB-INF/web.xml</WatchedResource>
+
+    <Resource name="jms/ConnectionFactory"
             auth="Container"
             type="org.apache.activemq.ActiveMQConnectionFactory"
             description="JMS Connection Factory"
