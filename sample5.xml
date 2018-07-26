@@ -1,0 +1,4 @@
+<Context antiResourceLocking="false" useHttpOnly="true" >
+    <Environment name="my.app.service.username" value="sample4" type="java.lang.String" override=false" />
+    <Environment name="my.app.service.password" value="foobar" type="java.lang.String" override=false" />
+</Context>
