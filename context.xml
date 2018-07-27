@@ -3,12 +3,21 @@
     <!-- Default set of monitored resources -->
     <WatchedResource>WEB-INF/web.xml</WatchedResource>
 
-    <Resource name="jdbc/mariaDB" auth="Container"
+    <Resource name="jdbc/mariaDB1" auth="Container"
         type="javax.sql.DataSource"
         minimumIdle="5" 
         maximumPoolSize="10"
         connectionTimeout="300000"
         dataSourceClassName="org.mariadb.jdbc.MySQLDataSource"
-        dataSource.url="jdbc:mysql://localhost:3306/myDatabase?useSSL=false&user=username&password=password"
+        dataSource.url="jdbc:mysql://localhost:3306/myDB1?useSSL=false&user=username1&password=password1"
+        />
+    
+        <Resource name="jdbc/mariaDB2" auth="Container"
+        type="javax.sql.DataSource"
+        minimumIdle="5" 
+        maximumPoolSize="10"
+        connectionTimeout="300000"
+        dataSourceClassName="org.mariadb.jdbc.MySQLDataSource"
+        dataSource.url="jdbc:mysql://localhost:3306/myDB2?useSSL=false&user=username2&password=password2"
         />
 </Context>
