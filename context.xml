@@ -9,7 +9,7 @@
         maximumPoolSize="10"
         connectionTimeout="300000"
         dataSourceClassName="org.mariadb.jdbc.MySQLDataSource"
-        dataSource.url="jdbc:mysql://localhost:3306/myDB1?useSSL=false&user=username1&password=password1"
+        dataSource.url="jdbc:mysql://localhost:3306/myDB1?useSSL=false"
         />
     
         <Resource name="jdbc/mariaDB2" auth="Container"
@@ -18,6 +18,6 @@
         maximumPoolSize="10"
         connectionTimeout="300000"
         dataSourceClassName="org.mariadb.jdbc.MySQLDataSource"
-        dataSource.url="jdbc:mysql://localhost:3306/myDB2?useSSL=false&user=username2&password=password2"
+        dataSource.url="jdbc:mysql://localhost:3306/myDB2?useSSL=false"
         />
 </Context>
