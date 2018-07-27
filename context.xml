@@ -3,18 +3,12 @@
     <!-- Default set of monitored resources -->
     <WatchedResource>WEB-INF/web.xml</WatchedResource>
 
-    <Resource name="jms/ConnectionFactory"
-            auth="Container"
-            type="org.apache.activemq.ActiveMQConnectionFactory"
-            description="JMS Connection Factory"
-            factory="org.apache.activemq.jndi.JNDIReferenceFactory"
-            brokerURL="vm://localhost"
-            brokerName="LocalActiveMQBroker"
-            useEmbeddedBroker="true"/>
-
-    <Resource name="jms/queue/MyQueue"
-              auth="Container"
-              type="org.apache.activemq.command.ActiveMQQueue"
-              factory="org.apache.activemq.jndi.JNDIReferenceFactory"
-              physicalName="MY.TEST.FOO.QUEUE"/>
+    <Resource name="jdbc/mariaDB" auth="Container"
+        type="javax.sql.DataSource"
+        minimumIdle="5" 
+        maximumPoolSize="10"
+        connectionTimeout="300000"
+        dataSourceClassName="org.mariadb.jdbc.MySQLDataSource"
+        dataSource.url="jdbc:mysql://localhost:3306/myDatabase?useSSL=false&user=username&password=password"
+        />
 </Context>
